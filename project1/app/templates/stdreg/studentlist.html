@@ -1,0 +1,19 @@
+{%extends 'stdreg/base.html'%}
+{%block content%}
+<form method="POST">
+    {% csrf_token%}
+    <select name="course" id="course">
+        <option value="All">All</option>
+        {%for crs in course%}
+        <option value={{crs.id}}>{{crs.course}}</option>
+        {%endfor%}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+<ol>
+    {%for std in students %}
+        <li>Student Name : {{std.name}} <br> USN : {{std.usn}} <br>Sem :{{std.sem}}</li>
+        <br><br>
+    {%endfor%}
+</ol>
+{%endblock%}

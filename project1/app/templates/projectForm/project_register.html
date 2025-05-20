@@ -1,0 +1,10 @@
+{%extends 'projectForm/base.html'%}
+{%block contect%}
+<h1>Create Project</h1> 
+    <form method="post"> 
+        {% csrf_token %} 
+        {{form.as_p}}
+        <button type="submit">Submit</button> 
+    </form> 
+</div>
+{%endblock%}

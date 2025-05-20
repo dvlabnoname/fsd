@@ -1,0 +1,11 @@
+{%extends 'projectForm/base.html'%}
+{%block contect%}
+<h1 >Projects</h1> 
+    <ul> 
+    {% for project in projects %} 
+        <li> 
+        <a href="http://127.0.0.1:8000/project_student/{{project.id}}">{{ project.topic }}</a> 
+        </li> 
+    {% endfor %} 
+</ul> 
+{%endblock%}

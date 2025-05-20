@@ -1,0 +1,9 @@
+{%extends 'stdreg/base.html'%}
+{%block content%}
+<ol>
+    {%for crs in course%}
+        <li>Course : {{crs.course}} <br> Code : {{crs.course}} <br>Credits :{{crs.credits}}</li>
+        <br><br>
+    {%endfor%}
+</ol>
+{%endblock%}
